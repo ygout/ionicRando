@@ -10,6 +10,7 @@ import { HomePage } from '../pages/home/home';
 import { HikesPage } from '../pages/hikes/hikes';
 import { HikeCurrentPage } from '../pages/hike-current/hike-current';
 import { HikeDetailsPage } from '../pages/hike-details/hike-details';
+import { HikeService } from '../services/hike';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { HikeDetailsPage } from '../pages/hike-details/hike-details';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    HikeService
   ]
 })
 export class AppModule {}
